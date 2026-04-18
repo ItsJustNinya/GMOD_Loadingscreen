@@ -1,52 +1,11 @@
 [
     {
-        "version": "0.3.0",
+        "version": "1.0.0",
         "date": "2026-04-19",
-        "title": "Drug Trade Overhaul",
-        "description": "A complete rework of the drug dealing system, with new items, new routes and improved balancing.",
+        "title": "Glua Pack",
+        "description": "We've added GLua Pack to our server. This should speed up those nasty Lua loading times!",
         "changes": [
-            { "type": "added",   "text": "New methamphetamine production chain with 4 craftable stages" },
-            { "type": "added",   "text": "Drug runner job — transport packages between drop points for a cut" },
-            { "type": "changed", "text": "Drug dealer sell prices rebalanced based on server economy feedback" },
-            { "type": "fixed",   "text": "Drug stash props no longer clip through certain building floors" },
-            { "type": "removed", "text": "Removed the old cannabis system (replaced by new chain)" }
-        ]
-    },
-    {
-        "version": "0.2.1",
-        "date": "2026-04-12",
-        "title": "Police Tooling Patch",
-        "description": "Quality-of-life improvements for police roles following community feedback.",
-        "changes": [
-            { "type": "added",   "text": "ANPR scanner added to Traffic Officer loadout" },
-            { "type": "changed", "text": "ARV callout range increased from 500u to 800u" },
-            { "type": "fixed",   "text": "Fixed dispatch notifications not clearing after incidents resolved" },
-            { "type": "fixed",   "text": "Handcuff animation no longer desyncs for the arrested player" }
-        ]
-    },
-    {
-        "version": "0.2.0",
-        "date": "2026-04-05",
-        "title": "Base Building Rules Update",
-        "description": "New props, constraints and clearer enforcement of base-building guidelines.",
-        "changes": [
-            { "type": "added",   "text": "Two new fencing prop sets available in the Entities menu" },
-            { "type": "changed", "text": "Fading door minimum open time increased from 4s to 5s" },
-            { "type": "changed", "text": "Max fading doors per base reduced from 4 to 3" },
-            { "type": "fixed",   "text": "Kill-corridor detection now flags no-collide tunnel builds correctly" },
-            { "type": "removed", "text": "Removed particle emitter props due to server performance impact" }
-        ]
-    },
-    {
-        "version": "0.1.0",
-        "date": "2026-03-28",
-        "title": "Initial Launch",
-        "description": "HazeRP goes live! Thank you to everyone who helped test during the closed beta.",
-        "changes": [
-            { "type": "added", "text": "Core PoliceRP gamemode with UK-themed jobs and loadouts" },
-            { "type": "added", "text": "Custom HazeRP HUD and scoreboard" },
-            { "type": "added", "text": "NHS, Roadworker, and Civilian job trees" },
-            { "type": "added", "text": "Bank robbery and gang-war systems" }
+            { "type": "added",   "text": "Glua pack is an addon that packs all known client-sided Lua files into a bundle so that they can all be downloaded at once instead of one at a time." },
         ]
     }
 ]
