@@ -5,7 +5,7 @@
         "title": "Glua Pack",
         "description": "We've added GLua Pack to our server. This should speed up those nasty Lua loading times!",
         "changes": [
-            { "type": "added",   "text": "Glua pack is an addon that packs all known client-sided Lua files into a bundle so that they can all be downloaded at once instead of one at a time." },
+            { "type": "added",   "text": "Glua pack is an addon that packs all known client-sided Lua files into a bundle so that they can all be downloaded at once instead of one at a time." }
         ]
     }
 ]
