@@ -666,25 +666,77 @@ footer a {
         color: white;
     }
 
-.warning-header {
+.dev-warning-banner {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    background: #ffaa00;
-    color: #1a1a1a;
-    text-align: center;
-    padding: 10px 20px;
-    font-size: 12px;
-    font-weight: 700;
+    /* Dark animated hazard stripes */
+    background: repeating-linear-gradient( -45deg, #151515, #151515 15px, #1e1e1e 15px, #1e1e1e 30px );
+    background-size: 42px 42px;
+    animation: hazardSlide 3s linear infinite;
+    border-bottom: 2px solid #ffaa00;
     z-index: 1000;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 20px;
+    box-shadow: 0 .25rem .5rem rgba(0,0,0,.3);
 }
 
-.warning-header i {
-    margin-right: 5px;
+.warning-content {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    font-size: 12px;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    /* Frosted glass effect behind the text for readability */
+    background: rgba(0, 0, 0, 0.6);
+    padding: 4px 18px;
+    border-radius: 3px;
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.pulse-icon {
+    color: #ffaa00;
+    font-size: 14px;
+    animation: pulseAlert 1.5s infinite;
+}
+
+.warning-text strong {
+    color: #ffaa00;
+}
+
+/* Animations */
+@keyframes hazardSlide {
+    0% {
+        background-position: 0 0;
+    }
+
+    100% {
+        background-position: 42px 0;
+    }
+}
+
+@keyframes pulseAlert {
+    0% {
+        transform: scale(1);
+        opacity: 1;
+    }
+
+    50% {
+        transform: scale(1.15);
+        opacity: 0.9;
+        text-shadow: 0 0 8px rgba(255, 170, 0, 0.8);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
 }
 
 /* ================================================================
