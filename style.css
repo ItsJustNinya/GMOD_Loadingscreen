@@ -2,7 +2,6 @@
 
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
 
-/* ── Reset ── */
 body, html {
     width: 100%;
     margin: 0;
@@ -25,9 +24,6 @@ a {
     box-sizing: border-box;
 }
 
-/* ================================================================
-   NAV
-   ================================================================ */
 nav {
     position: fixed;
     top: 0;
@@ -125,9 +121,7 @@ nav.scrolled .nav-connect {
     color: white !important;
 }
 
-/* ================================================================
-   MASTHEAD  (matches Riverside exactly)
-   ================================================================ */
+
 .masthead {
     background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
     -webkit-background-size: cover;
@@ -222,9 +216,7 @@ img.logo {
             opacity: 0.8;
         }
 
-/* ================================================================
-   CARDS ROW  (matches Riverside exactly)
-   ================================================================ */
+
 .cards-row {
     height: 35%;
     display: flex;
@@ -273,9 +265,7 @@ img.logo {
     color: #555;
 }
 
-/* ================================================================
-   SHAPING SECTION  (new — styled to match Riverside's light theme)
-   ================================================================ */
+
 .shaping-section {
     background: #f5f5f5;
     border-top: 1px solid #dfdfdf;
@@ -718,9 +708,7 @@ body.loading-screen {
     white-space: nowrap;
 }
 
-/* ================================================================
-   RESPONSIVE  (mirrors Riverside breakpoints)
-   ================================================================ */
+
 @media only screen and (max-width: 1499px) {
     img.logo {
         max-height: 100px;
@@ -833,3 +821,15 @@ body.loading-screen {
         width: 80px;
     }
 }
+
+
+
+
+
+
+
+
+/* 
+    If you couldn't tell by the Style.css or heck the home page layout, i was a fan of RSRP back in the day.
+    Don't expect this UI to stay, I'll most likely change it to be more unique soon.
+*/
