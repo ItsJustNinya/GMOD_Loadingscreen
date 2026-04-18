@@ -666,6 +666,27 @@ footer a {
         color: white;
     }
 
+.warning-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background: #ffaa00;
+    color: #1a1a1a;
+    text-align: center;
+    padding: 10px 20px;
+    font-size: 12px;
+    font-weight: 700;
+    z-index: 1000;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15);
+}
+
+.warning-header i {
+    margin-right: 5px;
+}
+
 /* ================================================================
    LOADING SCREEN (index.html)
    ================================================================ */
