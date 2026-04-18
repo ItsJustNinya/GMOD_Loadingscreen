@@ -1,0 +1,835 @@
+
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;700&display=swap');
+
+/* ── Reset ── */
+body, html {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+    overflow-x: hidden;
+    height: 100%;
+}
+
+p, div, h1, h2, h3, h4, span, li {
+    font-family: 'Roboto', sans-serif;
+}
+
+a {
+    cursor: pointer;
+    color: white;
+    text-decoration: none;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+/* ================================================================
+   NAV
+   ================================================================ */
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 200;
+    height: 52px;
+    background: transparent;
+    display: flex;
+    align-items: center;
+    padding: 0 32px;
+    transition: background 0.25s, box-shadow 0.25s;
+}
+
+    nav.scrolled {
+        background: rgba(255,255,255,0.97);
+        box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    }
+
+        nav.scrolled a {
+            color: #333;
+        }
+
+        nav.scrolled .nav-connect {
+            color: white !important;
+        }
+
+.nav-brand {
+    display: flex;
+    align-items: center;
+    gap: 9px;
+    margin-right: auto;
+}
+
+    .nav-brand img {
+        height: 26px;
+        width: auto;
+        vertical-align: middle;
+    }
+
+.nav-brand-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+}
+
+    .nav-links a {
+        font-family: 'Roboto', sans-serif;
+        font-size: 13px;
+        font-weight: 400;
+        letter-spacing: 0.1em;
+        text-transform: uppercase;
+        padding: 6px 14px;
+        border-radius: 2px;
+        transition: background 0.2s;
+        color: white;
+    }
+
+nav.scrolled .nav-links a {
+    color: #444;
+}
+
+.nav-links a:hover {
+    background: rgba(255,255,255,0.15);
+}
+
+nav.scrolled .nav-links a:hover {
+    background: #f5f5f5;
+    color: #000;
+}
+
+.nav-connect {
+    background: white !important;
+    color: #007eff !important;
+    border-radius: 2px;
+    font-weight: 700 !important;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+    .nav-connect:hover {
+        opacity: 0.85;
+    }
+
+nav.scrolled .nav-connect {
+    background: #007eff !important;
+    color: white !important;
+}
+
+/* ================================================================
+   MASTHEAD  (matches Riverside exactly)
+   ================================================================ */
+.masthead {
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    height: 65%;
+    min-height: 420px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+}
+
+.mh-container {
+    width: 50%;
+    text-align: center;
+}
+
+h1.header {
+    font-size: 4vw;
+    font-weight: 700;
+    text-transform: uppercase;
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0;
+}
+
+img.logo {
+    max-height: 150px;
+    width: auto;
+    vertical-align: middle;
+}
+
+.subtext {
+    font-size: 20px;
+    font-weight: 300;
+    margin-top: 0;
+    color: white;
+}
+
+.mh-buttons {
+    padding-top: 25px;
+    display: flex;
+    justify-content: center;
+}
+
+.buttons-row {
+    width: inherit;
+}
+
+.button {
+    padding: 10px 25px;
+    font-size: 14px;
+    margin-right: 5px;
+    border-radius: 2px;
+    text-decoration: none;
+    transition: 0.2s;
+    border: 2px solid;
+    min-width: 117px;
+    white-space: nowrap;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+    display: inline-block;
+    text-align: center;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+}
+
+    .button:hover {
+        box-shadow: 0 .150rem .25rem rgba(0,0,0,0.226);
+    }
+
+    .button.x {
+        border-color: white;
+        color: white;
+    }
+
+        .button.x:hover {
+            background: rgba(255,255,255,0.123);
+        }
+
+    .button.y {
+        border-color: #ffffff;
+        background: #ffffff;
+        color: #007eff;
+    }
+
+        .button.y:hover {
+            opacity: 0.8;
+        }
+
+/* ================================================================
+   CARDS ROW  (matches Riverside exactly)
+   ================================================================ */
+.cards-row {
+    height: 35%;
+    display: flex;
+    align-items: center;
+    flex-direction: row;
+    justify-content: center;
+    background: white;
+    padding: 20px 0;
+}
+
+.card i {
+    color: #007eff;
+    background: #f5f5f5;
+    border: 1px solid #dfdfdf;
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 26px;
+    vertical-align: middle;
+}
+
+.card {
+    text-align: center;
+    width: 20%;
+    margin: 15px;
+    display: inline-block;
+    color: #333;
+}
+
+.card-content {
+    height: 237px;
+}
+
+.card h4 {
+    font-weight: 700;
+    margin: 12px 0 6px;
+    font-size: 14px;
+    color: #222;
+}
+
+.card p {
+    font-size: 13px;
+    color: #555;
+}
+
+/* ================================================================
+   SHAPING SECTION  (new — styled to match Riverside's light theme)
+   ================================================================ */
+.shaping-section {
+    background: #f5f5f5;
+    border-top: 1px solid #dfdfdf;
+    border-bottom: 1px solid #dfdfdf;
+    padding: 50px 40px;
+}
+
+.shaping-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 56px;
+    align-items: start;
+}
+
+.shaping-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+    .shaping-text h2 span {
+        color: #007eff;
+    }
+
+.shaping-text p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.dev-tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #007eff;
+    font-weight: 700;
+    background: #f0f7ff;
+    border: 1px solid #cce0ff;
+    border-radius: 2px;
+    padding: 6px 12px;
+    margin-top: 6px;
+    letter-spacing: 0.05em;
+}
+
+.shaping-cards {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.shaping-card {
+    background: white;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    padding: 16px 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.05);
+    transition: box-shadow 0.2s;
+}
+
+    .shaping-card:hover {
+        box-shadow: 0 .25rem .5rem rgba(0,126,255,0.1);
+    }
+
+.shaping-card-icon {
+    color: #007eff;
+    font-size: 1.1em;
+    margin-top: 2px;
+    flex-shrink: 0;
+}
+
+.shaping-card h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 4px;
+}
+
+.shaping-card p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.65;
+    margin: 0;
+}
+
+/* ================================================================
+   CONNECT / COMMUNITY SECTION
+   ================================================================ */
+.connect-section {
+    background: white;
+    border-top: 1px solid #dfdfdf;
+    padding: 50px 40px;
+}
+
+.connect-inner {
+    max-width: 1000px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: start;
+}
+
+.section-label {
+    font-size: 20px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+    .section-label span {
+        color: #007eff;
+    }
+
+.section-sub {
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 16px;
+    line-height: 1.75;
+}
+
+.discord-wrap {
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    overflow: hidden;
+}
+
+    .discord-wrap iframe {
+        display: block;
+    }
+
+.connect-block {
+    background: #f5f5f5;
+    border: 1px solid #dfdfdf;
+    border-radius: 2px;
+    padding: 22px;
+}
+
+    .connect-block .server-ip {
+        font-size: 18px;
+        font-weight: 700;
+        color: #007eff;
+        margin-bottom: 4px;
+    }
+
+    .connect-block .server-meta {
+        font-size: 12px;
+        color: #888;
+        margin-bottom: 18px;
+    }
+
+.connect-btn {
+    display: block;
+    width: 100%;
+    text-align: center;
+    padding: 11px;
+    background: #007eff;
+    color: white;
+    border-radius: 2px;
+    font-size: 13px;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    transition: opacity 0.2s;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+    .connect-btn:hover {
+        opacity: 0.85;
+        color: white;
+    }
+
+/* ================================================================
+   ABOUT PAGE — story + values
+   ================================================================ */
+.page-hero {
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    height: 340px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    padding-top: 52px;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.page-hero-inner h1 {
+    font-size: 36px;
+    font-weight: 700;
+    text-transform: uppercase;
+    margin-bottom: 8px;
+}
+
+.page-hero-inner p {
+    font-size: 16px;
+    font-weight: 300;
+    color: rgba(255,255,255,0.85);
+}
+
+.breadcrumb {
+    margin-top: 12px;
+    font-size: 12px;
+    font-weight: 400;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: rgba(255,255,255,0.6);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+}
+
+    .breadcrumb a {
+        color: rgba(255,255,255,0.7);
+    }
+
+        .breadcrumb a:hover {
+            color: white;
+        }
+
+    .breadcrumb .current {
+        color: white;
+        font-weight: 700;
+    }
+
+.content-wrap {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 50px 40px;
+}
+
+.story-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+    margin-bottom: 50px;
+}
+
+.story-text h2 {
+    font-size: 22px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 12px;
+}
+
+    .story-text h2 span {
+        color: #007eff;
+    }
+
+.story-text p {
+    font-size: 13px;
+    color: #555;
+    line-height: 1.8;
+    margin-bottom: 10px;
+}
+
+.story-image {
+    background: url('Images/background.png') no-repeat center center;
+    background-size: cover;
+    height: 260px;
+    border: 1px solid #dfdfdf;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+.values-section {
+    background: #f5f5f5;
+    border: 1px solid #dfdfdf;
+    padding: 36px;
+    margin-bottom: 50px;
+}
+
+.section-heading {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+    .section-heading h2 {
+        font-size: 20px;
+        font-weight: 700;
+        color: #222;
+        margin-bottom: 5px;
+    }
+
+    .section-heading p {
+        font-size: 13px;
+        color: #888;
+    }
+
+.section-divider {
+    width: 40px;
+    height: 2px;
+    background: #007eff;
+    margin: 8px auto 0;
+}
+
+.values-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 24px;
+}
+
+.value-item {
+    text-align: center;
+}
+
+.value-icon {
+    color: #007eff;
+    background: white;
+    border: 1px solid #dfdfdf;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 25px;
+    font-size: 1em;
+    margin-bottom: 12px;
+}
+
+.value-item h4 {
+    font-size: 13px;
+    font-weight: 700;
+    color: #222;
+    margin-bottom: 6px;
+}
+
+.value-item p {
+    font-size: 12px;
+    color: #666;
+    line-height: 1.65;
+}
+
+.cta-banner {
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center;
+    background-size: cover;
+    padding: 46px 36px;
+    text-align: center;
+    color: white;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+}
+
+    .cta-banner h2 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 8px;
+    }
+
+    .cta-banner p {
+        font-size: 14px;
+        font-weight: 300;
+        color: rgba(255,255,255,0.85);
+        margin-bottom: 20px;
+    }
+
+    .cta-banner .button {
+        margin: 4px;
+    }
+
+/* ================================================================
+   FOOTER
+   ================================================================ */
+footer {
+    background: #1a1a1a;
+    padding: 26px 36px;
+    text-align: center;
+    border-top: 2px solid #007eff;
+}
+
+.footer-brand {
+    font-size: 14px;
+    font-weight: 700;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+    color: white;
+    margin-bottom: 6px;
+}
+
+footer p {
+    font-size: 12px;
+    color: rgba(255,255,255,0.35);
+    line-height: 2.2;
+}
+
+footer a {
+    color: rgba(255,255,255,0.4);
+}
+
+    footer a:hover {
+        color: white;
+    }
+
+/* ================================================================
+   LOADING SCREEN (index.html)
+   ================================================================ */
+body.loading-screen {
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.loading-bar {
+    margin-top: 30px;
+    width: calc(100% - 80px);
+    max-width: 820px;
+    background: #007eff;
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    padding: 13px 22px;
+    border-radius: 0;
+    box-shadow: 0 .125rem .25rem rgba(0,0,0,.15);
+}
+
+    .loading-bar img {
+        height: 38px;
+        width: auto;
+        flex-shrink: 0;
+    }
+
+.loading-bar-name {
+    font-family: 'Roboto', sans-serif;
+    font-weight: 700;
+    font-size: 1.15em;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    color: white;
+    white-space: nowrap;
+}
+
+/* ================================================================
+   RESPONSIVE  (mirrors Riverside breakpoints)
+   ================================================================ */
+@media only screen and (max-width: 1499px) {
+    img.logo {
+        max-height: 100px;
+    }
+
+    .subtext {
+        font-size: 18px;
+    }
+}
+
+@media only screen and (max-width: 1152px) {
+    .button {
+        padding: 8px 17px;
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 999px) {
+    .mh-container {
+        width: 60%;
+    }
+
+    img.logo {
+        max-height: 70px;
+    }
+
+    h1.header {
+        font-size: 4.5vw;
+    }
+
+    .subtext {
+        font-size: 15px;
+    }
+
+    .cards-row {
+        flex-wrap: wrap;
+        height: inherit;
+    }
+
+    .card {
+        flex-basis: 40%;
+        width: 40%;
+    }
+
+    .shaping-inner, .connect-inner, .story-grid {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+}
+
+@media only screen and (max-width: 774px) {
+    .button {
+        display: inline-block;
+    }
+
+        .button.y {
+            margin-top: 8px;
+        }
+}
+
+@media only screen and (max-height: 750px) {
+    .cards-row {
+        flex-wrap: wrap;
+        height: inherit;
+    }
+
+    .card {
+        flex-basis: 40%;
+        width: 40%;
+    }
+}
+
+@media only screen and (max-width: 699px) {
+    img.logo {
+        max-height: 50px;
+    }
+
+    .loading-bar {
+        width: calc(100% - 32px);
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .mh-container {
+        width: 90%;
+    }
+
+    h1.header {
+        font-size: 7vw;
+    }
+
+    .content-wrap {
+        padding: 30px 20px;
+    }
+
+    .shaping-section, .connect-section {
+        padding: 36px 20px;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    .card {
+        flex-basis: 100%;
+        width: 100%;
+    }
+}
+
+@media only screen and (max-width: 359px) {
+    .button {
+        width: 80px;
+    }
+}

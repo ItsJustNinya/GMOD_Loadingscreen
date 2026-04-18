@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazeRP | Home</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <nav id="main-nav">
+        <a href="home.html" class="nav-brand">
+            <img src="Images/Logo.png" alt="HazeRP">
+            <span class="nav-brand-name">HazeRP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="home.html">Home</a></li>
+            <li><a href="steam://connect/85.208.197.68:27015" class="nav-connect">Connect</a></li>
+        </ul>
+    </nav>
+
+    <div class="masthead">
+        <div class="mh-container">
+            <h1 class="header">HazeRP</h1>
+            <img class="logo" src="Images/Logo.png" alt="HazeRP Logo">
+            <p class="subtext">Haze Police Roleplay - United Kingdom's Premier GMod PoliceRP</p>
+            <div class="mh-buttons">
+                <div class="buttons-row">
+                    <a href="steam://connect/85.208.197.68:27015" class="button y">Connect</a>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="cards-row">
+        <div class="card">
+            <div class="card-content">
+                <i class="fas fa-users"></i>
+                <h4>A Welcoming Community</h4>
+                <p>Help us build a friendly and welcoming community centered around high-quality British police roleplay. New players are always guided and supported every step of the way.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <i class="fas fa-masks-theater"></i>
+                <h4>Exciting Roleplay</h4>
+                <p>From high-speed pursuits to hostage negotiations and armed response, every shift brings something new. Play as police, a civilian, or a criminal.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <i class="fas fa-code"></i>
+                <h4>Community-Based Content</h4>
+                <p>We develop our own custom features and utilize addons from talented asset creators. Our community is always encouraged to suggest new ideas, request changes, and provide constructive criticism. We actively listen to your input, because you are the players who bring the server to life.</p>
+            </div>
+        </div>
+        <div class="card">
+            <div class="card-content">
+                <i class="fas fa-bolt"></i>
+                <h4>Exhilarating Gameplay</h4>
+                <p>Ready to meet new people and enjoy an incredible time? Join HazeRP today, and start your new life in law enforcement or a criminal organisation.</p>
+            </div>
+        </div>
+    </div>
+
+
+
+    <div class="connect-section">
+        <div class="connect-inner">
+            <div>
+                <p class="section-label">Join our <span>Discord</span></p>
+                <p class="section-sub">Chat with the community, get support, stay up to date with announcements and events all in our Discord server.</p>
+                <div class="discord-wrap">
+                    <iframe src="https://discord.com/widget?id=1381289925898534913&theme=dark" width="100%" height="480" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-brand">HazeRP</div>
+        <p>
+            &copy; 2026 HazeRP - Haze Police Roleplay. All rights reserved.<br>
+            <a href="home.html">Home</a> &bull;
+            <a href="steam://connect/85.208.197.68:27015">Connect</a>
+        </p>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 52); });
+    </script>
+
+</body>
+</html>
