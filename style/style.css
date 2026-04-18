@@ -123,7 +123,7 @@ nav.scrolled .nav-connect {
 
 
 .masthead {
-    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
     -webkit-background-size: cover;
     -moz-background-size: cover;
     -o-background-size: cover;
@@ -447,7 +447,7 @@ img.logo {
    ABOUT PAGE — story + values
    ================================================================ */
 .page-hero {
-    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
     background-size: cover;
     height: 340px;
     display: flex;
@@ -531,7 +531,7 @@ img.logo {
 }
 
 .story-image {
-    background: url('Images/background.png') no-repeat center center;
+    background: url('../Images/background.png') no-repeat center center;
     background-size: cover;
     height: 260px;
     border: 1px solid #dfdfdf;
@@ -608,7 +608,7 @@ img.logo {
 }
 
 .cta-banner {
-    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center;
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center;
     background-size: cover;
     padding: 46px 36px;
     text-align: center;
@@ -743,7 +743,7 @@ footer a {
    LOADING SCREEN (index.html)
    ================================================================ */
 body.loading-screen {
-    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('Images/background.png') no-repeat center center fixed;
+    background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
     background-size: cover;
     display: flex;
     align-items: flex-start;

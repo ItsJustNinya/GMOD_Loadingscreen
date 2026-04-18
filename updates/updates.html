@@ -1,0 +1,426 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazeRP | Updates</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%),
+                        url('../Images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            min-height: 220px;
+            display: flex;
+            align-items: flex-end;
+            padding: 0 0 36px 0;
+            color: white;
+        }
+
+        .page-hero-inner {
+            max-width: 1000px;
+            width: 100%;
+            margin: 0 auto;
+            padding: 0 40px;
+        }
+
+        .page-hero h1 {
+            font-size: 2.2em;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin: 0 0 6px;
+        }
+
+        .page-hero p {
+            font-size: 13px;
+            font-weight: 300;
+            margin: 0;
+            opacity: 0.85;
+        }
+
+        /* Breadcrumb */
+        .breadcrumb {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 10px;
+        }
+
+        .breadcrumb a { color: white; }
+        .breadcrumb a:hover { opacity: 0.85; }
+        .breadcrumb .sep { margin: 0 6px; }
+
+        /* ── Main content ── */
+        .updates-wrap {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 48px 40px 64px;
+        }
+
+        /* Filter bar */
+        .filter-bar {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            margin-bottom: 32px;
+            flex-wrap: wrap;
+        }
+
+        .filter-bar span {
+            font-size: 11px;
+            font-weight: 700;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            color: #888;
+            margin-right: 4px;
+        }
+
+        .filter-btn {
+            font-family: 'Roboto', sans-serif;
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 5px 14px;
+            border-radius: 2px;
+            border: 1px solid #dfdfdf;
+            background: white;
+            color: #555;
+            cursor: pointer;
+            transition: background 0.15s, border-color 0.15s, color 0.15s;
+        }
+
+        .filter-btn:hover,
+        .filter-btn.active {
+            background: #007eff;
+            border-color: #007eff;
+            color: white;
+        }
+
+        /* ── Timeline ── */
+        .timeline {
+            position: relative;
+            padding-left: 28px;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 7px;
+            top: 8px;
+            bottom: 0;
+            width: 2px;
+            background: #dfdfdf;
+        }
+
+        /* Update card */
+        .update-card {
+            position: relative;
+            margin-bottom: 32px;
+            background: white;
+            border: 1px solid #dfdfdf;
+            border-radius: 3px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.05);
+            overflow: hidden;
+            transition: box-shadow 0.2s;
+        }
+
+        .update-card:hover {
+            box-shadow: 0 .25rem .6rem rgba(0,126,255,0.1);
+        }
+
+        /* Dot on timeline */
+        .update-card::before {
+            content: '';
+            position: absolute;
+            left: -24px;
+            top: 20px;
+            width: 12px;
+            height: 12px;
+            border-radius: 50%;
+            background: #007eff;
+            border: 2px solid white;
+            box-shadow: 0 0 0 2px #007eff;
+        }
+
+        /* Card header strip */
+        .card-header {
+            background: linear-gradient(40deg, rgba(0,126,255,0.95) 0%, rgba(0,80,180,1) 100%);
+            padding: 14px 20px;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            flex-wrap: wrap;
+        }
+
+        .version-badge {
+            font-size: 11px;
+            font-weight: 700;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            background: rgba(255,255,255,0.2);
+            color: white;
+            padding: 3px 10px;
+            border-radius: 2px;
+            border: 1px solid rgba(255,255,255,0.3);
+            flex-shrink: 0;
+        }
+
+        .card-header h3 {
+            font-size: 15px;
+            font-weight: 700;
+            color: white;
+            margin: 0;
+            flex: 1;
+        }
+
+        .card-date {
+            font-size: 11px;
+            color: rgba(255,255,255,0.75);
+            letter-spacing: 0.05em;
+            white-space: nowrap;
+        }
+
+        /* Card body */
+        .card-body {
+            padding: 16px 20px 20px;
+        }
+
+        .card-desc {
+            font-size: 13px;
+            color: #555;
+            line-height: 1.75;
+            margin: 0 0 16px;
+            padding-bottom: 14px;
+            border-bottom: 1px solid #f0f0f0;
+        }
+
+        /* Change list */
+        .change-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            gap: 7px;
+        }
+
+        .change-list li {
+            display: flex;
+            align-items: flex-start;
+            gap: 10px;
+            font-size: 12.5px;
+            color: #444;
+            line-height: 1.5;
+        }
+
+        /* Type badges */
+        .change-type {
+            display: inline-block;
+            font-size: 10px;
+            font-weight: 700;
+            letter-spacing: 0.08em;
+            text-transform: uppercase;
+            padding: 2px 8px;
+            border-radius: 2px;
+            flex-shrink: 0;
+            margin-top: 1px;
+            min-width: 58px;
+            text-align: center;
+        }
+
+        .type-added   { background: #e6f9ef; color: #1a8a45; border: 1px solid #b3e8cb; }
+        .type-changed { background: #fff8e6; color: #a06000; border: 1px solid #ffdfa0; }
+        .type-fixed   { background: #e6f0ff; color: #1a50a0; border: 1px solid #aac8ff; }
+        .type-removed { background: #ffeaea; color: #aa1a1a; border: 1px solid #ffb3b3; }
+
+        /* Empty / error states */
+        .state-msg {
+            text-align: center;
+            padding: 60px 20px;
+            color: #999;
+            font-size: 13px;
+        }
+
+        .state-msg i {
+            font-size: 32px;
+            color: #ccc;
+            display: block;
+            margin-bottom: 12px;
+        }
+
+        /* ── Background for content area ── */
+        .updates-page-bg {
+            background: #f5f5f5;
+            border-top: 1px solid #dfdfdf;
+            min-height: 60vh;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- ── NAV ── -->
+    <nav id="main-nav">
+        <a href="../home/home.html" class="nav-brand">
+            <img src="../Images/Logo.png" alt="HazeRP">
+            <span class="nav-brand-name">HazeRP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../home/home.html">Home</a></li>
+            <li><a href="../updates/updates.html">Updates</a></li>
+            <li><a href="steam://connect/85.208.197.68:27015" class="nav-connect">Connect</a></li>
+        </ul>
+    </nav>
+
+    <!-- ── PAGE HERO ── -->
+    <div class="page-hero" style="padding-top: 52px;">
+        <div class="page-hero-inner">
+            <div class="breadcrumb">
+                <a href="../home/home.html">Home</a>
+                <span class="sep">/</span>
+                <span>Updates</span>
+            </div>
+            <h1>Server Updates</h1>
+            <p>Patch notes, new features and fixes — everything that's changed on HazeRP.</p>
+        </div>
+    </div>
+
+    <!-- ── UPDATES CONTENT ── -->
+    <div class="updates-page-bg">
+        <div class="updates-wrap">
+
+            <!-- Filter bar -->
+            <div class="filter-bar">
+                <span>Filter:</span>
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="added">Added</button>
+                <button class="filter-btn" data-filter="changed">Changed</button>
+                <button class="filter-btn" data-filter="fixed">Fixed</button>
+                <button class="filter-btn" data-filter="removed">Removed</button>
+            </div>
+
+            <!-- Timeline renders here -->
+            <div class="timeline" id="timeline">
+                <div class="state-msg">
+                    <i class="fas fa-circle-notch fa-spin"></i>
+                    Loading updates&hellip;
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-brand">HazeRP</div>
+        <p>
+            &copy; 2026 HazeRP - Haze Police Roleplay. All rights reserved.<br>
+            <a href="../home/home.html">Home</a> &bull;
+            <a href="updates.html">Updates</a> &bull;
+            <a href="steam://connect/85.208.197.68:27015">Connect</a>
+        </p>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => {
+            nav.classList.toggle('scrolled', window.scrollY > 52);
+        });
+
+        function formatDate(iso) {
+            const [y, m, d] = iso.split('-').map(Number);
+            return new Date(y, m - 1, d).toLocaleDateString('en-GB', {
+                day: 'numeric', month: 'long', year: 'numeric'
+            });
+        }
+
+        function typeLabel(type) {
+            const map = { added: 'Added', changed: 'Changed', fixed: 'Fixed', removed: 'Removed' };
+            return map[type] || type;
+        }
+
+        function buildCard(update, activeFilter) {
+            const changes = activeFilter === 'all'
+                ? update.changes
+                : update.changes.filter(c => c.type === activeFilter);
+
+            if (activeFilter !== 'all' && changes.length === 0) return null;
+
+            const li = changes.map(c => `
+                <li>
+                    <span class="change-type type-${c.type}">${typeLabel(c.type)}</span>
+                    <span>${c.text}</span>
+                </li>
+            `).join('');
+
+            const card = document.createElement('div');
+            card.className = 'update-card';
+            card.innerHTML = `
+                <div class="card-header">
+                    <span class="version-badge">v${update.version}</span>
+                    <h3>${update.title}</h3>
+                    <span class="card-date"><i class="fas fa-calendar-alt" style="margin-right:5px;opacity:.7"></i>${formatDate(update.date)}</span>
+                </div>
+                <div class="card-body">
+                    <p class="card-desc">${update.description}</p>
+                    <ul class="change-list">${li}</ul>
+                </div>
+            `;
+            return card;
+        }
+
+        let allUpdates = [];
+
+        function render(filter) {
+            const timeline = document.getElementById('timeline');
+            timeline.innerHTML = '';
+
+            const visible = allUpdates
+                .map(u => buildCard(u, filter))
+                .filter(Boolean);
+
+            if (visible.length === 0) {
+                timeline.innerHTML = `
+                    <div class="state-msg">
+                        <i class="fas fa-box-open"></i>
+                        No updates match this filter.
+                    </div>`;
+                return;
+            }
+
+            visible.forEach(card => timeline.appendChild(card));
+        }
+
+        document.querySelectorAll('.filter-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                document.querySelectorAll('.filter-btn').forEach(b => b.classList.remove('active'));
+                btn.classList.add('active');
+                render(btn.dataset.filter);
+            });
+        });
+
+        fetch('updates.json')
+            .then(r => {
+                if (!r.ok) throw new Error('Could not load updates.json');
+                return r.json();
+            })
+            .then(data => {
+                allUpdates = data.sort((a, b) =>
+                    b.version.localeCompare(a.version, undefined, { numeric: true })
+                );
+                render('all');
+            })
+            .catch(err => {
+                document.getElementById('timeline').innerHTML = `
+                    <div class="state-msg">
+                        <i class="fas fa-exclamation-circle"></i>
+                        Failed to load updates. Make sure <code>updates.json</code> is in the same folder.<br>
+                        <small style="color:#bbb;margin-top:6px;display:block">${err.message}</small>
+                    </div>`;
+            });
+    </script>
+
+</body>
+</html>
