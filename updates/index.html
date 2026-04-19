@@ -8,36 +8,38 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
         .page-hero {
-            background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%),
-                        url('../Images/background.png') no-repeat center center fixed;
+            background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
             background-size: cover;
-            min-height: 220px;
+            height: 65%;
+            min-height: 420px;
             display: flex;
-            align-items: flex-end;
-            padding: 0 0 36px 0;
+            justify-content: center;
+            align-items: center;
             color: white;
+            text-align: center;
+            padding-top: 52px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
         }
 
         .page-hero-inner {
             max-width: 1000px;
             width: 100%;
-            margin: 0 auto;
             padding: 0 40px;
         }
 
         .page-hero h1 {
-            font-size: 2.2em;
+            font-size: 4vw;
             font-weight: 700;
             text-transform: uppercase;
+            margin: 0 0 12px;
             letter-spacing: 2px;
-            margin: 0 0 6px;
         }
 
         .page-hero p {
-            font-size: 13px;
+            font-size: 20px;
             font-weight: 300;
             margin: 0;
-            opacity: 0.85;
+            color: white;
         }
 
         /* Breadcrumb */
@@ -46,12 +48,24 @@
             letter-spacing: 0.1em;
             text-transform: uppercase;
             opacity: 0.7;
-            margin-bottom: 10px;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
         }
 
-        .breadcrumb a { color: white; }
-        .breadcrumb a:hover { opacity: 0.85; }
-        .breadcrumb .sep { margin: 0 6px; }
+            .breadcrumb a {
+                color: white;
+            }
+
+                .breadcrumb a:hover {
+                    opacity: 0.85;
+                }
+
+            .breadcrumb .sep {
+                margin: 0 6px;
+            }
 
         /* ── Main content ── */
         .updates-wrap {
@@ -69,14 +83,14 @@
             flex-wrap: wrap;
         }
 
-        .filter-bar span {
-            font-size: 11px;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 0.1em;
-            color: #888;
-            margin-right: 4px;
-        }
+            .filter-bar span {
+                font-size: 11px;
+                font-weight: 700;
+                text-transform: uppercase;
+                letter-spacing: 0.1em;
+                color: #888;
+                margin-right: 4px;
+            }
 
         .filter-btn {
             font-family: 'Roboto', sans-serif;
@@ -93,12 +107,12 @@
             transition: background 0.15s, border-color 0.15s, color 0.15s;
         }
 
-        .filter-btn:hover,
-        .filter-btn.active {
-            background: #007eff;
-            border-color: #007eff;
-            color: white;
-        }
+            .filter-btn:hover,
+            .filter-btn.active {
+                background: #007eff;
+                border-color: #007eff;
+                color: white;
+            }
 
         /* ── Timeline ── */
         .timeline {
@@ -106,15 +120,15 @@
             padding-left: 28px;
         }
 
-        .timeline::before {
-            content: '';
-            position: absolute;
-            left: 7px;
-            top: 8px;
-            bottom: 0;
-            width: 2px;
-            background: #dfdfdf;
-        }
+            .timeline::before {
+                content: '';
+                position: absolute;
+                left: 7px;
+                top: 8px;
+                bottom: 0;
+                width: 2px;
+                background: #dfdfdf;
+            }
 
         /* Update card */
         .update-card {
@@ -128,23 +142,23 @@
             transition: box-shadow 0.2s;
         }
 
-        .update-card:hover {
-            box-shadow: 0 .25rem .6rem rgba(0,126,255,0.1);
-        }
+            .update-card:hover {
+                box-shadow: 0 .25rem .6rem rgba(0,126,255,0.1);
+            }
 
-        /* Dot on timeline */
-        .update-card::before {
-            content: '';
-            position: absolute;
-            left: -24px;
-            top: 20px;
-            width: 12px;
-            height: 12px;
-            border-radius: 50%;
-            background: #007eff;
-            border: 2px solid white;
-            box-shadow: 0 0 0 2px #007eff;
-        }
+            /* Dot on timeline */
+            .update-card::before {
+                content: '';
+                position: absolute;
+                left: -24px;
+                top: 20px;
+                width: 12px;
+                height: 12px;
+                border-radius: 50%;
+                background: #007eff;
+                border: 2px solid white;
+                box-shadow: 0 0 0 2px #007eff;
+            }
 
         /* Card header strip */
         .card-header {
@@ -208,14 +222,14 @@
             gap: 7px;
         }
 
-        .change-list li {
-            display: flex;
-            align-items: flex-start;
-            gap: 10px;
-            font-size: 12.5px;
-            color: #444;
-            line-height: 1.5;
-        }
+            .change-list li {
+                display: flex;
+                align-items: flex-start;
+                gap: 10px;
+                font-size: 12.5px;
+                color: #444;
+                line-height: 1.5;
+            }
 
         /* Type badges */
         .change-type {
@@ -232,10 +246,29 @@
             text-align: center;
         }
 
-        .type-added   { background: #e6f9ef; color: #1a8a45; border: 1px solid #b3e8cb; }
-        .type-changed { background: #fff8e6; color: #a06000; border: 1px solid #ffdfa0; }
-        .type-fixed   { background: #e6f0ff; color: #1a50a0; border: 1px solid #aac8ff; }
-        .type-removed { background: #ffeaea; color: #aa1a1a; border: 1px solid #ffb3b3; }
+        .type-added {
+            background: #e6f9ef;
+            color: #1a8a45;
+            border: 1px solid #b3e8cb;
+        }
+
+        .type-changed {
+            background: #fff8e6;
+            color: #a06000;
+            border: 1px solid #ffdfa0;
+        }
+
+        .type-fixed {
+            background: #e6f0ff;
+            color: #1a50a0;
+            border: 1px solid #aac8ff;
+        }
+
+        .type-removed {
+            background: #ffeaea;
+            color: #aa1a1a;
+            border: 1px solid #ffb3b3;
+        }
 
         /* Empty / error states */
         .state-msg {
@@ -245,16 +278,16 @@
             font-size: 13px;
         }
 
-        .state-msg i {
-            font-size: 32px;
-            color: #ccc;
-            display: block;
-            margin-bottom: 12px;
-        }
+            .state-msg i {
+                font-size: 32px;
+                color: #ccc;
+                display: block;
+                margin-bottom: 12px;
+            }
 
         /* ── Background for content area ── */
         .updates-page-bg {
-            background: #f5f5f5;
+            background: white;
             border-top: 1px solid #dfdfdf;
             min-height: 60vh;
         }
@@ -275,8 +308,7 @@
         </ul>
     </nav>
 
-    <!-- ── PAGE HERO ── -->
-    <div class="page-hero" style="padding-top: 52px;">
+    <div class="page-hero">
         <div class="page-hero-inner">
             <div class="breadcrumb">
                 <a href="../home/index.html">Home</a>
@@ -284,15 +316,12 @@
                 <span>Updates</span>
             </div>
             <h1>Server Updates</h1>
-            <p>Patch notes, new features and fixes — everything that's changed on HazeRP.</p>
+            <p>Patch notes, new features and fixes, everything that's changed on HazeRP.</p>
         </div>
     </div>
 
-    <!-- ── UPDATES CONTENT ── -->
     <div class="updates-page-bg">
         <div class="updates-wrap">
-
-            <!-- Filter bar -->
             <div class="filter-bar">
                 <span>Filter:</span>
                 <button class="filter-btn active" data-filter="all">All</button>
@@ -301,15 +330,12 @@
                 <button class="filter-btn" data-filter="fixed">Fixed</button>
                 <button class="filter-btn" data-filter="removed">Removed</button>
             </div>
-
-            <!-- Timeline renders here -->
             <div class="timeline" id="timeline">
                 <div class="state-msg">
                     <i class="fas fa-circle-notch fa-spin"></i>
                     Loading updates&hellip;
                 </div>
             </div>
-
         </div>
     </div>
 
@@ -349,25 +375,25 @@
             if (activeFilter !== 'all' && changes.length === 0) return null;
 
             const li = changes.map(c => `
-                <li>
-                    <span class="change-type type-${c.type}">${typeLabel(c.type)}</span>
-                    <span>${c.text}</span>
-                </li>
-            `).join('');
+                            <li>
+                                <span class="change-type type-${c.type}">${typeLabel(c.type)}</span>
+                                <span>${c.text}</span>
+                            </li>
+                        `).join('');
 
             const card = document.createElement('div');
             card.className = 'update-card';
             card.innerHTML = `
-                <div class="card-header">
-                    <span class="version-badge">v${update.version}</span>
-                    <h3>${update.title}</h3>
-                    <span class="card-date"><i class="fas fa-calendar-alt" style="margin-right:5px;opacity:.7"></i>${formatDate(update.date)}</span>
-                </div>
-                <div class="card-body">
-                    <p class="card-desc">${update.description}</p>
-                    <ul class="change-list">${li}</ul>
-                </div>
-            `;
+                            <div class="card-header">
+                                <span class="version-badge">v${update.version}</span>
+                                <h3>${update.title}</h3>
+                                <span class="card-date"><i class="fas fa-calendar-alt" style="margin-right:5px;opacity:.7"></i>${formatDate(update.date)}</span>
+                            </div>
+                            <div class="card-body">
+                                <p class="card-desc">${update.description}</p>
+                                <ul class="change-list">${li}</ul>
+                            </div>
+                        `;
             return card;
         }
 
@@ -383,10 +409,10 @@
 
             if (visible.length === 0) {
                 timeline.innerHTML = `
-                    <div class="state-msg">
-                        <i class="fas fa-box-open"></i>
-                        No updates match this filter.
-                    </div>`;
+                                <div class="state-msg">
+                                    <i class="fas fa-box-open"></i>
+                                    No updates match this filter.
+                                </div>`;
                 return;
             }
 
@@ -407,18 +433,16 @@
                 return r.json();
             })
             .then(data => {
-                allUpdates = data.sort((a, b) =>
-                    b.version.localeCompare(a.version, undefined, { numeric: true })
-                );
+                allUpdates = data.reverse();
                 render('all');
             })
             .catch(err => {
                 document.getElementById('timeline').innerHTML = `
-                    <div class="state-msg">
-                        <i class="fas fa-exclamation-circle"></i>
-                        Failed to load updates. Make sure <code>updates.json</code> is in the same folder.<br>
-                        <small style="color:#bbb;margin-top:6px;display:block">${err.message}</small>
-                    </div>`;
+                                <div class="state-msg">
+                                    <i class="fas fa-exclamation-circle"></i>
+                                    Failed to load updates. Make sure <code>updates.json</code> is in the same folder.<br>
+                                    <small style="color:#bbb;margin-top:6px;display:block">${err.message}</small>
+                                </div>`;
             });
     </script>
 
