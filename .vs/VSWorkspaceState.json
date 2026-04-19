@@ -1,7 +1,9 @@
 {
   "ExpandedNodes": [
-    ""
+    "",
+    "\\home",
+    "\\updates"
   ],
-  "SelectedNode": "\\home.html",
+  "SelectedNode": "\\updates\\index.html",
   "PreviewInSolutionExplorer": false
 }
