@@ -2,10 +2,28 @@
     {
         "version": "1.0.0",
         "date": "2026-04-19",
-        "title": "Glua Pack",
+        "title": "GLua Pack",
         "description": "We've added GLua Pack to our server. This should speed up those nasty Lua loading times!",
         "changes": [
-            { "type": "added",   "text": "Glua pack is an addon that packs all known client-sided Lua files into a bundle so that they can all be downloaded at once instead of one at a time." }
+            { "type": "added",   "text": "GLua Pack is an addon that packs all known client-sided Lua files into a bundle so they can be downloaded all at once instead of individually." }
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "2026-04-19",
+        "title": "New Robbery Location",
+        "description": "The Leslie Green PD is now robbable!",
+        "changes": [
+            { "type": "added",   "text": "You can now raid the Leslie Green PD, featuring 6 large safes, 2 large weapon caches, and a deposit box. Be careful though—Leslie Green's security network notifies the entire police force." }
+        ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "2026-04-19",
+        "title": "Vehicle Damage Fix",
+        "description": "Resolved a major issue regarding damage transfer while driving.",
+        "changes": [
+            { "type": "fixed",   "text": "Fixed a bug where the player in the driver's seat would take a massive amount of damage when their vehicle was shot, regardless of where the bullet actually impacted the car." }
         ]
     }
 ]
