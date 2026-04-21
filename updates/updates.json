@@ -25,5 +25,15 @@
         "changes": [
             { "type": "fixed",   "text": "Fixed a bug where the player in the driver's seat would take a massive amount of damage when their vehicle was shot, regardless of where the bullet actually impacted the car." }
         ]
+    },
+    {
+        "version": "1.0.0",
+        "date": "2026-04-19",
+        "title": "New Car Dealer",
+        "description": "We've introduced a brand new Car Dealer NPC and removed persistent vehicle damage upon respawn.",
+        "changes": [
+            { "type": "added",   "text": "A new Car Dealer NPC has been added. It is much easier to use and significantly less laggy than the default VCMod car dealer." },
+            { "type": "removed", "text": "Removed the annoying feature where vehicles would remain damaged when respawned. Cars will now spawn fully repaired." }
+        ]
     }
 ]
