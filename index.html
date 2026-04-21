@@ -14,6 +14,7 @@
             height: 100vh;
             margin: 0;
             overflow: hidden;
+            gap: 6px;
             /* background comes from style.css (background.png) */
         }
 
@@ -27,7 +28,7 @@
             max-height: 680px;
             border-radius: 4px;
             overflow: hidden;
-            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.45);
+            /* No drop shadow */
         }
 
         /* Each section fills its share of the panel height */
@@ -45,14 +46,9 @@
         .blue-section {
             background: linear-gradient(40deg, rgba(0,126,255,0.95) 0%, rgba(0,80,180,1) 100%);
             color: white;
-            flex: 0.9;
-            border-bottom: 3px solid rgba(255,255,255,0.4);
+            flex: 1.2;
+            border-radius: 3px;
         }
-
-            .blue-section.bottom {
-                border-bottom: none;
-                border-top: 3px solid rgba(255,255,255,0.4);
-            }
 
         /* Middle: White — gets the most space for rules */
         .white-section {
@@ -61,16 +57,17 @@
             flex: 2;
             padding: 24px 10%;
             overflow-y: auto;
+            border-radius: 3px;
         }
 
         /* Logo & title */
         .top-logo {
-            max-height: 72px;
-            margin-bottom: 8px;
+            max-height: 80px;
+            margin-bottom: 10px;
         }
 
         .server-title {
-            font-size: 2.2em;
+            font-size: 2.4em;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 2px;
@@ -141,35 +138,29 @@
         <!-- TOP: Branding -->
         <div class="section blue-section">
             <img src="Images/Logo.png" alt="HazeRP" class="top-logo">
-            <h1 class="server-title">HazeRP</h1>
-            <p class="server-tagline">United Kingdom's Premier GMod PoliceRP</p>
+            <h1 class="server-title">Haze Roleplay | PoliceRP</h1>
+            <p class="server-tagline">[UK] Haze Roleplay | PoliceRP | 50K Start | BRAND NEW | FAST-DL</p>
         </div>
 
         <!-- MIDDLE: Rules -->
         <div class="section white-section">
             <h2 class="rules-heading">Community Guidelines</h2>
             <div class="rules-container">
-                <div class="dev-warning-banner">
-                    <div class="warning-content">
-                        <i class="fas fa-exclamation-triangle pulse-icon"></i>
-                        <span class="warning-text"><strong>In Development</strong> &bull; Our server is currently still being developed, expect restarts and bugs at any given time.</span>
-                    </div>
-                </div>
                 <div class="rule-item">
                     <h4>RDM &amp; VDM</h4>
                     <p>You must have a valid RP reason to kill or use a vehicle as a weapon against others.</p>
                 </div>
                 <div class="rule-item">
                     <h4>New Life Rule (NLR)</h4>
-                    <p>Do not return to the scene of your death or remember past events for 5 minutes.</p>
+                    <p>Do not return to the scene of your death for 5 minutes.</p>
                 </div>
                 <div class="rule-item">
                     <h4>FearRP</h4>
-                    <p>You must value your life when threatened by a weapon or outnumbered.</p>
+                    <p>You must value your life when threatened by a weapon & outnumbered.</p>
                 </div>
                 <div class="rule-item">
                     <h4>Metagaming</h4>
-                    <p>Do not use OOC information (like Discord or nameplates) for in-game advantages.</p>
+                    <p>Do not use OOC information (like Discord) for in-game advantages.</p>
                 </div>
                 <div class="rule-item">
                     <h4>Respect</h4>
@@ -183,7 +174,7 @@
         </div>
 
         <!-- BOTTOM: Status message -->
-        <div class="section blue-section bottom">
+        <div class="section blue-section">
             <div id="welcome-msg">Connecting to the server...</div>
             <div class="standby-text">PLEASE STAND BY WHILE WE INITIALISE DATA</div>
         </div>
@@ -225,7 +216,7 @@
             "Police Dogs can attack armed suspects to assist officers.",
             "Roadworkers should only use half the road for their builds.",
             "Gang wars must be adverted.",
-            "Assassin hits can be completed anywhere except spawn-protected zones.",
+            "hits can be completed anywhere except spawn-protected zones.",
             "Using hotkeys to manipulate doors during combat is prohibited.",
             "Bank raids can occur every 25 minutes.",
             "Base raids have a 15-minute cooldown - pick your target wisely.",
