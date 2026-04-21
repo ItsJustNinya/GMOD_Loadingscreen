@@ -28,7 +28,7 @@
     },
     {
         "version": "1.0.0",
-        "date": "2026-04-19",
+        "date": "2026-04-21",
         "title": "New Car Dealer",
         "description": "We've introduced a brand new Car Dealer NPC and removed persistent vehicle damage upon respawn.",
         "changes": [
