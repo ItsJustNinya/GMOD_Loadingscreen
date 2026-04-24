@@ -2,347 +2,128 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="stylesheet" href="style/style.css">
-    <title>HazeRP Loading</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazeRP | Discord</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <style>
-        body.loading-screen {
+        .page-hero {
+            background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 65%;
+            min-height: 420px;
             display: flex;
-            flex-direction: column;
-            align-items: center;
-            justify-content: center;
-            height: 100vh;
-            margin: 0;
-            overflow: hidden;
-            gap: 6px;
-        }
-
-        .loading-panel {
-            display: flex;
-            flex-direction: column;
-            width: 85%;
-            max-width: 960px;
-            height: 82vh;
-            max-height: 680px;
-            border-radius: 4px;
-            overflow: hidden;
-        }
-
-        .section {
-            display: flex;
-            flex-direction: column;
             justify-content: center;
             align-items: center;
-            width: 100%;
-            padding: 20px 40px;
-            text-align: center;
-        }
-
-        .blue-section {
-            background: linear-gradient(40deg, rgba(0,126,255,0.95) 0%, rgba(0,80,180,1) 100%);
             color: white;
-            flex: 1.2;
-            border-radius: 3px;
+            text-align: center;
+            padding-top: 52px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
         }
 
-        .white-section {
-            background: #ffffff;
-            color: #333;
-            flex: 2;
-            padding: 24px 10%;
-            overflow-y: auto;
-            border-radius: 3px;
+        .page-hero-inner {
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 40px;
         }
 
-        .top-logo {
-            max-height: 80px;
-            margin-bottom: 10px;
-        }
-
-        .server-title {
-            font-size: 2.4em;
+        .page-hero h1 {
+            font-size: 4vw;
             font-weight: 700;
             text-transform: uppercase;
+            margin: 0 0 12px;
             letter-spacing: 2px;
-            margin: 0 0 4px;
         }
 
-        .server-meta {
-            display: flex;
-            gap: 18px;
-            margin-top: 6px;
-            font-size: 0.8em;
-            font-weight: 400;
-            opacity: 0.85;
-        }
-
-            .server-meta span {
-                display: flex;
-                align-items: center;
-                gap: 5px;
-            }
-
-            .server-meta .dot {
-                width: 6px;
-                height: 6px;
-                border-radius: 50%;
-                background: rgba(255,255,255,0.7);
-                display: inline-block;
-            }
-
-        .rules-heading {
-            color: #222;
-            margin: 0 0 16px;
-            font-size: 1.1em;
-            font-weight: 700;
-            text-transform: uppercase;
-            letter-spacing: 1px;
-        }
-
-        .rules-container {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 14px 30px;
-            width: 100%;
-            text-align: left;
-        }
-
-        .rule-item h4 {
-            color: #007eff;
-            margin: 0 0 3px;
-            font-size: 13px;
-            text-transform: uppercase;
-            letter-spacing: 0.5px;
-        }
-
-        .rule-item p {
-            font-size: 12px;
-            margin: 0;
-            color: #555;
-            line-height: 1.45;
-        }
-
-        .bottom-section {
-            position: relative;
-            flex-direction: row;
-            justify-content: space-between;
-            align-items: center;
-            padding: 16px 30px;
-        }
-
-        .bottom-left {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-start;
-            gap: 4px;
-            flex: 1;
-        }
-
-        .bottom-center {
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: 6px;
-            flex: 2;
-        }
-
-        .bottom-right {
-            flex: 1;
-            display: flex;
-            justify-content: flex-end;
-            align-items: center;
-        }
-
-        #welcome-msg {
-            font-size: 0.95em;
-            font-style: italic;
+        .page-hero p {
+            font-size: 20px;
             font-weight: 300;
-            color: rgba(255,255,255,0.9);
-            max-width: 400px;
-            text-align: center;
             margin: 0;
+            color: white;
         }
 
-        .progress-wrap {
-            width: 100%;
-            max-width: 340px;
-            background: rgba(255,255,255,0.2);
-            border-radius: 99px;
-            height: 5px;
-            overflow: hidden;
-        }
-
-        .progress-bar {
-            height: 100%;
-            width: 0%;
-            background: #ffffff;
-            border-radius: 99px;
-            transition: width 0.3s ease;
-        }
-
-        /* Status text */
-        #status-text {
+        .breadcrumb {
             font-size: 11px;
-            letter-spacing: 1px;
-            opacity: 0.75;
+            letter-spacing: 0.1em;
             text-transform: uppercase;
-            color: white;
-            margin: 0;
+            opacity: 0.7;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
         }
 
-        #file-text {
-            font-size: 10px;
-            opacity: 0.55;
-            color: white;
-            margin: 0;
-            max-width: 340px;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-        }
+            .breadcrumb a {
+                color: white;
+            }
+
+                .breadcrumb a:hover {
+                    opacity: 0.85;
+                }
+
+            .breadcrumb .sep {
+                margin: 0 6px;
+            }
     </style>
 </head>
-<body class="loading-screen">
+<body>
 
-    <div class="loading-panel">
+    <nav id="main-nav">
+        <a href="../home/index.html" class="nav-brand">
+            <img src="../Images/Logo.png" alt="HazeRP">
+            <span class="nav-brand-name">HazeRP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../updates/index.html">Updates</a></li>
+            <li><a href="steam://connect/85.208.197.68:27015" class="nav-connect">Connect</a></li>
+        </ul>
+    </nav>
 
-        <div class="section blue-section">
-            <img src="Images/Logo.png" alt="HazeRP" class="top-logo">
-            <h1 class="server-title" id="server-name">Haze Roleplay</h1>
-            <div class="server-meta">
-                <span><span class="dot"></span> <span id="meta-gamemode">PoliceRP</span></span>
-                <span><span class="dot"></span> Players: <span id="meta-players">?</span></span>
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <h1>Discord</h1>
+            <p>Join our community server to chat, get support, and stay up to date.</p>
+            <div class="breadcrumb">
+                <a href="../home/index.html">Home</a>
+                <span class="sep">/</span>
+                <span>Discord</span>
             </div>
         </div>
-
-        <div class="section white-section">
-            <h2 class="rules-heading">Community Guidelines</h2>
-            <div class="rules-container">
-                <div class="rule-item">
-                    <h4>RDM &amp; VDM</h4>
-                    <p>You must have a valid RP reason to kill or use a vehicle as a weapon against others.</p>
-                </div>
-                <div class="rule-item">
-                    <h4>New Life Rule (NLR)</h4>
-                    <p>Do not return to the scene of your death for 5 minutes.</p>
-                </div>
-                <div class="rule-item">
-                    <h4>FearRP</h4>
-                    <p>You must value your life when threatened by a weapon &amp; outnumbered.</p>
-                </div>
-                <div class="rule-item">
-                    <h4>Metagaming</h4>
-                    <p>Do not use OOC information (like Discord) for in-game advantages.</p>
-                </div>
-                <div class="rule-item">
-                    <h4>Respect</h4>
-                    <p>Respect others. We don't moderate small quarrels, but we intervene if fun is disrupted.</p>
-                </div>
-                <div class="rule-item">
-                    <h4>Common Sense</h4>
-                    <p>If it seems like it would harm the community or experience, it is likely against the rules.</p>
-                </div>
-            </div>
-        </div>
-
-        <div class="section blue-section bottom-section">
-            <div class="bottom-left">
-            </div>
-
-            <div class="bottom-center">
-                <p id="welcome-msg">Connecting to the server...</p>
-                <div class="progress-wrap">
-                    <div class="progress-bar" id="progress-bar"></div>
-                </div>
-                <p id="status-text">Please stand by</p>
-                <p id="file-text">&nbsp;</p>
-            </div>
-
-            <div class="bottom-right">
-            </div>
-        </div>
-
     </div>
 
+    <div class="connect-section" style="border-top: none;">
+        <div style="max-width: 860px; margin: 0 auto;">
+            <p class="section-label" style="text-align: center;">Join our <span>Discord</span></p>
+            <p class="section-sub" style="text-align: center; max-width: 560px; margin: 0 auto 24px;">
+                Chat with the community, get support, stay up to date with announcements and events — all in one place.
+            </p>
+            <div class="discord-wrap">
+                <iframe src="https://discord.com/widget?id=1381289925898534913&theme=dark"
+                        width="100%"
+                        height="600"
+                        allowtransparency="true"
+                        frameborder="0"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-brand">HazeRP</div>
+        <p>
+            &copy; 2026 HazeRP - Haze Police Roleplay. All rights reserved.<br>
+            <a href="../home/index.html">Home</a> &bull;
+            <a href="steam://connect/85.208.197.68:27015">Connect</a>
+        </p>
+    </footer>
+
     <script>
-        const messages = [
-            "Welcome to HazeRP! Prepare for high-quality British roleplay.",
-            "Did you know? Police can raid properties with probable cause.",
-            "Remember to join our Discord for the latest community news.",
-            "Respect your fellow players and keep the environment inclusive.",
-            "NLR lasts for 5 minutes - use that time to plan your next move!",
-            "Always value your life! FearRP is essential for realistic play.",
-            "Need help? Contact our staff team via the @ symbol in chat.",
-            "Don't forget to use /advert for major crimes like bank raids.",
-            "Help us build a friendly community by welcoming new players.",
-            "Metagaming ruins the mystery - keep it in character!",
-            "Make sure your RP name is realistic and appropriate.",
-            "NHS personnel are here to help - don't target them needlessly.",
-            "Ready for a pursuit? Every shift brings something new.",
-            "Keep your base builds realistic and fair for everyone.",
-            "Keypads must be clearly visible and near your fading doors.",
-            "Do not interfere with active staff sessions or training.",
-            "Prop misuse like surfing or climbing is strictly prohibited.",
-            "Car bombs are for RP only - don't use them for mass RDM.",
-            "Suicide bombings have a 30-minute cooldown - use them wisely.",
-            "Drug Dealers cannot commit major crimes. Focus on your trade!",
-            "Citizens can only carry pistols for self-defense.",
-            "Towing vehicles requires a valid legal justification.",
-            "Bhopping and animation exploits are not allowed in combat.",
-            "Fading doors must stay open for at least 4 seconds.",
-            "You are allowed one main base and one business location.",
-            "Don't build kill corridors that exploit fading doors.",
-            "No-collided props are prohibited to ensure fair combat.",
-            "Combat building to gain an advantage is against the rules.",
-            "Disconnecting to avoid RP or staff sits is a bannable offense.",
-            "Police Dogs can attack armed suspects to assist officers.",
-            "Roadworkers should only use half the road for their builds.",
-            "Gang wars must be adverted.",
-            "Hits can be completed anywhere except spawn-protected zones.",
-            "Bank raids can occur every 25 minutes.",
-            "Base raids have a 15-minute cooldown - pick your target wisely.",
-            "Counter-arrests require you to be affiliated with the suspect.",
-            "Always keep a clear and obvious entrance to your base.",
-            "Enjoy your stay and thank you for choosing HazeRP!"
-        ];
-        document.getElementById('welcome-msg').innerText =
-            messages[Math.floor(Math.random() * messages.length)];
-
-        let totalFiles = 0;
-
-        function updateProgress(needed) {
-            if (totalFiles === 0) return;
-            const done = totalFiles - needed;
-            const pct = Math.round((done / totalFiles) * 100);
-            document.getElementById('progress-bar').style.width = pct + '%';
-        }
-
-        window.GameDetails = function (servername, serverurl, mapname, maxplayers, steamid, gamemode) {
-            document.getElementById('server-name').innerText = servername || 'Haze Roleplay';
-            document.getElementById('meta-gamemode').innerText = gamemode || 'PoliceRP';
-            document.getElementById('meta-players').innerText = maxplayers || '?';
-        };
-
-
-        window.SetFilesTotal = function (total) {
-            totalFiles = total;
-            updateProgress(total);
-        };
-
-        window.SetFilesNeeded = function (needed) {
-            updateProgress(needed);
-            if (needed === 0) {
-                document.getElementById('file-text').innerText = 'All files downloaded!';
-                document.getElementById('progress-bar').style.width = '100%';
-            }
-        };
-
-        window.DownloadingFile = function (fileName) {
-            document.getElementById('file-text').innerText = fileName;
-        };
-
-        window.SetStatusChanged = function (status) {
-            document.getElementById('status-text').innerText = status;
-        };
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 52); });
     </script>
+
 </body>
 </html>
