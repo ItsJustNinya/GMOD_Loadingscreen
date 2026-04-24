@@ -356,9 +356,6 @@ img.logo {
     margin: 0;
 }
 
-/* ================================================================
-   CONNECT / COMMUNITY SECTION
-   ================================================================ */
 .connect-section {
     background: white;
     border-top: 1px solid #dfdfdf;
@@ -443,9 +440,6 @@ img.logo {
         color: white;
     }
 
-/* ================================================================
-   ABOUT PAGE — story + values
-   ================================================================ */
 .page-hero {
     background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
     background-size: cover;
@@ -633,9 +627,6 @@ img.logo {
         margin: 4px;
     }
 
-/* ================================================================
-   FOOTER
-   ================================================================ */
 footer {
     background: #1a1a1a;
     padding: 26px 36px;
@@ -671,7 +662,6 @@ footer a {
     top: 0;
     left: 0;
     width: 100%;
-    /* Dark animated hazard stripes */
     background: repeating-linear-gradient( -45deg, #151515, #151515 15px, #1e1e1e 15px, #1e1e1e 30px );
     background-size: 42px 42px;
     animation: hazardSlide 3s linear infinite;
@@ -692,7 +682,6 @@ footer a {
     letter-spacing: 0.1em;
     text-transform: uppercase;
     color: white;
-    /* Frosted glass effect behind the text for readability */
     background: rgba(0, 0, 0, 0.6);
     padding: 4px 18px;
     border-radius: 3px;
@@ -710,7 +699,6 @@ footer a {
     color: #ffaa00;
 }
 
-/* Animations */
 @keyframes hazardSlide {
     0% {
         background-position: 0 0;
@@ -739,9 +727,6 @@ footer a {
     }
 }
 
-/* ================================================================
-   LOADING SCREEN (index.html)
-   ================================================================ */
 body.loading-screen {
     background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
     background-size: cover;

@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HazeRP | Discord</title>
+    <link rel="stylesheet" href="../style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <style>
+        .page-hero {
+            background: linear-gradient(40deg, rgba(0,126,255,0.737) 0%, rgba(0,126,255,0) 100%), url('../Images/background.png') no-repeat center center fixed;
+            background-size: cover;
+            height: 65%;
+            min-height: 420px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: white;
+            text-align: center;
+            padding-top: 52px;
+            box-shadow: 0 .125rem .25rem rgba(0,0,0,.075);
+        }
+
+        .page-hero-inner {
+            max-width: 1000px;
+            width: 100%;
+            padding: 0 40px;
+        }
+
+        .page-hero h1 {
+            font-size: 4vw;
+            font-weight: 700;
+            text-transform: uppercase;
+            margin: 0 0 12px;
+            letter-spacing: 2px;
+        }
+
+        .page-hero p {
+            font-size: 20px;
+            font-weight: 300;
+            margin: 0;
+            color: white;
+        }
+
+        .breadcrumb {
+            font-size: 11px;
+            letter-spacing: 0.1em;
+            text-transform: uppercase;
+            opacity: 0.7;
+            margin-bottom: 16px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 7px;
+        }
+
+            .breadcrumb a {
+                color: white;
+            }
+
+                .breadcrumb a:hover {
+                    opacity: 0.85;
+                }
+
+            .breadcrumb .sep {
+                margin: 0 6px;
+            }
+    </style>
+</head>
+<body>
+
+    <nav id="main-nav">
+        <a href="../home/index.html" class="nav-brand">
+            <img src="../Images/Logo.png" alt="HazeRP">
+            <span class="nav-brand-name">HazeRP</span>
+        </a>
+        <ul class="nav-links">
+            <li><a href="../home/index.html">Home</a></li>
+            <li><a href="../updates/index.html">Updates</a></li>
+            <li><a href="steam://connect/85.208.197.68:27015" class="nav-connect">Connect</a></li>
+        </ul>
+    </nav>
+
+    <div class="page-hero">
+        <div class="page-hero-inner">
+            <h1>Discord</h1>
+            <p>Join our community server to chat, get support, and stay up to date.</p>
+            <div class="breadcrumb">
+                <a href="../home/index.html">Home</a>
+                <span class="sep">/</span>
+                <span>Discord</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="connect-section" style="border-top: none;">
+        <div style="max-width: 860px; margin: 0 auto;">
+            <p class="section-label" style="text-align: center;">Join our <span>Discord</span></p>
+            <p class="section-sub" style="text-align: center; max-width: 560px; margin: 0 auto 24px;">
+                Chat with the community, get support, stay up to date with announcements and events — all in one place.
+            </p>
+            <div class="discord-wrap">
+                <iframe src="https://discord.com/widget?id=1381289925898534913&theme=dark"
+                        width="100%"
+                        height="600"
+                        allowtransparency="true"
+                        frameborder="0"
+                        sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts">
+                </iframe>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <div class="footer-brand">HazeRP</div>
+        <p>
+            &copy; 2026 HazeRP - Haze Police Roleplay. All rights reserved.<br>
+            <a href="../home/index.html">Home</a> &bull;
+            <a href="steam://connect/85.208.197.68:27015">Connect</a>
+        </p>
+    </footer>
+
+    <script>
+        const nav = document.getElementById('main-nav');
+        window.addEventListener('scroll', () => { nav.classList.toggle('scrolled', window.scrollY > 52); });
+    </script>
+
+</body>
+</html>
