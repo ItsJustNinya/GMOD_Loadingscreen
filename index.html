@@ -5,7 +5,6 @@
     <link rel="stylesheet" href="style/style.css">
     <title>HazeRP Loading</title>
     <style>
-        /* ── Loading screen layout ── */
         body.loading-screen {
             display: flex;
             flex-direction: column;
@@ -15,10 +14,8 @@
             margin: 0;
             overflow: hidden;
             gap: 6px;
-            /* background comes from style.css (background.png) */
         }
 
-        /* Centered card panel — doesn't fill the whole screen */
         .loading-panel {
             display: flex;
             flex-direction: column;
@@ -28,10 +25,8 @@
             max-height: 680px;
             border-radius: 4px;
             overflow: hidden;
-            /* No drop shadow */
         }
 
-        /* Each section fills its share of the panel height */
         .section {
             display: flex;
             flex-direction: column;
@@ -42,7 +37,6 @@
             text-align: center;
         }
 
-        /* Top & Bottom: Blue */
         .blue-section {
             background: linear-gradient(40deg, rgba(0,126,255,0.95) 0%, rgba(0,80,180,1) 100%);
             color: white;
@@ -50,7 +44,6 @@
             border-radius: 3px;
         }
 
-        /* Middle: White — gets the most space for rules */
         .white-section {
             background: #ffffff;
             color: #333;
@@ -60,7 +53,6 @@
             border-radius: 3px;
         }
 
-        /* Logo & title */
         .top-logo {
             max-height: 80px;
             margin-bottom: 10px;
@@ -81,7 +73,6 @@
             margin: 0;
         }
 
-        /* Rules grid */
         .rules-heading {
             color: #222;
             margin: 0 0 16px;
@@ -114,7 +105,6 @@
             line-height: 1.45;
         }
 
-        /* Bottom bar message */
         #welcome-msg {
             font-size: 1.1em;
             font-style: italic;
@@ -135,14 +125,12 @@
 
     <div class="loading-panel">
 
-        <!-- TOP: Branding -->
         <div class="section blue-section">
             <img src="Images/Logo.png" alt="HazeRP" class="top-logo">
             <h1 class="server-title">Haze Roleplay | PoliceRP</h1>
             <p class="server-tagline">[UK] Haze Roleplay | PoliceRP | 50K Start | BRAND NEW | FAST-DL</p>
         </div>
 
-        <!-- MIDDLE: Rules -->
         <div class="section white-section">
             <h2 class="rules-heading">Community Guidelines</h2>
             <div class="rules-container">
@@ -173,7 +161,6 @@
             </div>
         </div>
 
-        <!-- BOTTOM: Status message -->
         <div class="section blue-section">
             <div id="welcome-msg">Connecting to the server...</div>
             <div class="standby-text">PLEASE STAND BY WHILE WE INITIALISE DATA</div>
