@@ -35,5 +35,16 @@
             { "type": "added",   "text": "A new Car Dealer NPC has been added. It is much easier to use and significantly less laggy than the default VCMod car dealer." },
             { "type": "removed", "text": "Removed the annoying feature where vehicles would remain damaged when respawned. Cars will now spawn fully repaired." }
         ]
+    },
+    {
+        "version": "1.1.0",
+        "date": "2026-04-26",
+        "title": "PD Equipment Update",
+        "description": "We've added three new tools to help the police force while on patrol.",
+        "changes": [
+            { "type": "added", "text": "Police Tablet: Equipped with the PD handbook, wanted suspects list, and criminal/plate lookups. Higher-ups (TSupt+) can also suspend driver's licenses for valid lawful reasons." },
+            { "type": "added", "text": "Pepper Spray: Temporarily impairs the vision of suspects and slows their movement." },
+            { "type": "added", "text": "Wheel Clamp: Officers can now clamp vehicle wheels when they have a lawful reason to do so." }
+        ]
     }
 ]
