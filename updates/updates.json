@@ -46,5 +46,23 @@
             { "type": "added", "text": "Pepper Spray: Temporarily impairs the vision of suspects and slows their movement." },
             { "type": "added", "text": "Wheel Clamp: Officers can now clamp vehicle wheels when they have a lawful reason to do so." }
         ]
+    },
+    {
+        "version": "1.2.0",
+        "date": "2026-04-27",
+        "title": "Bug Fixes & Alterations",
+        "description": "Various bug fixes & alterations across the server.",
+        "changes": [
+            { "type": "added", "text": "Added a short one second timer to the cuffs." },
+            { "type": "added", "text": "Added the PD Armory to the other department buildings." },
+            { "type": "changed", "text": "Changed the speed of various cars." },
+            { "type": "changed", "text": "Allowed Leslie PD stolen items to be pickup-able via grav gun." },
+            { "type": "removed", "text": "Removed stungun ragdolling when shot." },
+            { "type": "added", "text": "Added the ability to change sweps while dragging people with cuffs." },
+            { "type": "added", "text": "Added a Basic and PD car dealer at Leslie Green." },
+            { "type": "added", "text": "Added other department jobs to PD Armory." },
+            { "type": "added", "text": "Added all Police departments to PD Door groups." },
+            { "type": "added", "text": "Added /team chats to all departments." }
+        ]
     }
 ]
