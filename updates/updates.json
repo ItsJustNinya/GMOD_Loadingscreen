@@ -64,5 +64,24 @@
             { "type": "added", "text": "Added all Police departments to PD Door groups." },
             { "type": "added", "text": "Added /team chats to all departments." }
         ]
+    },
+    {
+        "version": "1.3.0",
+        "date": "2026-04-30",
+        "title": "New Cars & Misc Fixes",
+        "description": "New vehicles for various ranks, Car Dealer improvements, and a handful of UI and gameplay tweaks.",
+        "changes": [
+            { "type": "added", "text": "PCSOs now get access to the Audi RS4." },
+            { "type": "added", "text": "Chief Inspectors and above now get access to the Volvo S60." },
+            { "type": "added", "text": "Mini punch Minis are now in the BMW Car dealer." },
+            { "type": "added", "text": "Added more BMWs to the BMW Car dealer." },
+            { "type": "added", "text": "Added a pause spin and change spin speed slider to the Car Dealer. You can also drag on the car to rotate it." },
+            { "type": "added", "text": "Gave the Police Tablet a world view model." },
+            { "type": "fixed", "text": "Improved friction on the PD Jag tires. It's now actually drivable." },
+            { "type": "fixed", "text": "Fixed a bug where if you were cuffed while sitting you couldn't get up. You can now jump while cuffed, but this needs testing." },
+            { "type": "changed", "text": "Reworked the UI for the Black Market Dealer (again, yay)." },
+            { "type": "changed", "text": "Changed vehicle access and firearm access in the Police Department to align with our PD Handbook." },
+            { "type": "changed", "text": "Small tweaks to Handcuffed and HUD UI elements." }
+        ]
     }
 ]
