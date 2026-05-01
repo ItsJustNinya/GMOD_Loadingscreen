@@ -46,5 +46,42 @@
             { "type": "added", "text": "Pepper Spray: Temporarily impairs the vision of suspects and slows their movement." },
             { "type": "added", "text": "Wheel Clamp: Officers can now clamp vehicle wheels when they have a lawful reason to do so." }
         ]
+    },
+    {
+        "version": "1.2.0",
+        "date": "2026-04-27",
+        "title": "Bug Fixes & Alterations",
+        "description": "Various bug fixes & alterations across the server.",
+        "changes": [
+            { "type": "added", "text": "Added a short one second timer to the cuffs." },
+            { "type": "added", "text": "Added the PD Armory to the other department buildings." },
+            { "type": "changed", "text": "Changed the speed of various cars." },
+            { "type": "changed", "text": "Allowed Leslie PD stolen items to be pickup-able via grav gun." },
+            { "type": "removed", "text": "Removed stungun ragdolling when shot." },
+            { "type": "added", "text": "Added the ability to change sweps while dragging people with cuffs." },
+            { "type": "added", "text": "Added a Basic and PD car dealer at Leslie Green." },
+            { "type": "added", "text": "Added other department jobs to PD Armory." },
+            { "type": "added", "text": "Added all Police departments to PD Door groups." },
+            { "type": "added", "text": "Added /team chats to all departments." }
+        ]
+    },
+    {
+        "version": "1.3.0",
+        "date": "2026-04-30",
+        "title": "New Cars & Misc Fixes",
+        "description": "New vehicles for various ranks, Car Dealer improvements, and a handful of UI and gameplay tweaks.",
+        "changes": [
+            { "type": "added", "text": "PCSOs now get access to the Audi RS4." },
+            { "type": "added", "text": "Chief Inspectors and above now get access to the Volvo S60." },
+            { "type": "added", "text": "Mini punch Minis are now in the BMW Car dealer." },
+            { "type": "added", "text": "Added more BMWs to the BMW Car dealer." },
+            { "type": "added", "text": "Added a pause spin and change spin speed slider to the Car Dealer. You can also drag on the car to rotate it." },
+            { "type": "added", "text": "Gave the Police Tablet a world view model." },
+            { "type": "fixed", "text": "Improved friction on the PD Jag tires. It's now actually drivable." },
+            { "type": "fixed", "text": "Fixed a bug where if you were cuffed while sitting you couldn't get up. You can now jump while cuffed, but this needs testing." },
+            { "type": "changed", "text": "Reworked the UI for the Black Market Dealer (again, yay)." },
+            { "type": "changed", "text": "Changed vehicle access and firearm access in the Police Department to align with our PD Handbook." },
+            { "type": "changed", "text": "Small tweaks to Handcuffed and HUD UI elements." }
+        ]
     }
 ]
