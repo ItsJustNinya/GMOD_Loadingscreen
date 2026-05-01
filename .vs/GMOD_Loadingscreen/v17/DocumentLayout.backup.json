@@ -19,10 +19,6 @@
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:style\\style.css||{A5401142-F49D-43DB-90B1-F57BA349E55C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\GMOD_Loadingscreen\\index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}",
-      "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:index.html||{40D31677-CBC0-4297-A9EF-89D907823A98}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Projects\\GMOD_Loadingscreen\\updates\\updates.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}",
       "RelativeMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|solutionrelative:updates\\updates.json||{90A6B3A7-C1A3-4009-A288-E2FF89E96FA0}"
     }
@@ -48,22 +44,9 @@
               "RelativeDocumentMoniker": "Discord\\index.html",
               "ToolTip": "C:\\Projects\\GMOD_Loadingscreen\\Discord\\index.html",
               "RelativeToolTip": "Discord\\index.html",
-              "ViewState": "AgIAAEcAAAAAAAAAAAAcwIAAAAAHAAAAAAAAAA==",
+              "ViewState": "AgIAAC4BAAAAAAAAAAAIwEwBAAAfAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
               "WhenOpened": "2026-04-24T17:03:10.5Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "index.html",
-              "DocumentMoniker": "C:\\Projects\\GMOD_Loadingscreen\\index.html",
-              "RelativeDocumentMoniker": "index.html",
-              "ToolTip": "C:\\Projects\\GMOD_Loadingscreen\\index.html",
-              "RelativeToolTip": "index.html",
-              "ViewState": "AgIAAJcAAAAAAAAAAAAkwK4AAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-21T19:49:58.629Z",
               "EditorCaption": ""
             },
             {
@@ -76,12 +59,11 @@
               "RelativeToolTip": "updates\\index.html",
               "ViewState": "AgIAAIgBAAAAAAAAAAAIwLUBAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-19T17:13:12.52Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T17:13:12.52Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 4,
               "Title": "updates.json",
               "DocumentMoniker": "C:\\Projects\\GMOD_Loadingscreen\\updates\\updates.json",
               "RelativeDocumentMoniker": "updates\\updates.json",
@@ -89,8 +71,7 @@
               "RelativeToolTip": "updates\\updates.json",
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001642|",
-              "WhenOpened": "2026-04-19T17:12:51.381Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T17:12:51.381Z"
             },
             {
               "$type": "Document",
@@ -102,8 +83,7 @@
               "RelativeToolTip": "style\\style.css",
               "ViewState": "AgIAAFIDAAAAAAAAAAAAAG8DAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003000|",
-              "WhenOpened": "2026-04-19T16:59:35.59Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T16:59:35.59Z"
             },
             {
               "$type": "Document",
@@ -115,8 +95,7 @@
               "RelativeToolTip": "home\\index.html",
               "ViewState": "AgIAACgAAAAAAAAAAAAUwDcAAABEAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001512|",
-              "WhenOpened": "2026-04-19T02:19:42.198Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-19T02:19:42.198Z"
             }
           ]
         }
